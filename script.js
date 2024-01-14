@@ -26,6 +26,11 @@ hh.addEventListener("input", function () {
 
 mm.addEventListener("input",function(){
      console.log("mm");
+     if (!(mm.value >= 0 && mm.value <= 99) || isNaN(parseInt(mm.value))) {
+        alert("Please enter a valid number between 0 and 9.");
+        mm.value = ""; // Clear the input value
+        return;
+    }
      if(mm.value.length >=2){
         ss.innerText = '';
         ss.isContentEditable = "true";
@@ -34,6 +39,11 @@ mm.addEventListener("input",function(){
 })
 
 ss.addEventListener("input",function(){
+    if (!(ss.value >= 0 && ss.value <= 99) || isNaN(parseInt(ss.value))) {
+        alert("Please enter a valid number between 0 and 9.");
+        ss.value = ""; // Clear the input value
+        return;
+    }
      if(ss.value.length >=2){
          set.focus();
      }
